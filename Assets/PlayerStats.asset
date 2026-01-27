@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa75c02aed082498cb0d0b8ae21f17a7, type: 3}
   m_Name: PlayerStats
   m_EditorClassIdentifier: Assembly-CSharp::CharacterStatsSO
-  characterName: Player Name
+  characterName: 
   healthStart: 10
   energyStart: 10
   startingItems:
