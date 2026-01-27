@@ -3,7 +3,7 @@ using System.IO;
 
 public static class SavePlayerCharacter
 {
-    private static string savePath = Application.persistentDataPath + "/savedPlayerCharaters.json";
+    private static string savePath = Application.persistentDataPath + "/savedPlayerCharacters.json";
 
     public static void Save(CharacterRuntime character)
     {

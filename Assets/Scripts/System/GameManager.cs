@@ -1,6 +1,3 @@
-using System.Runtime.CompilerServices;
-using System.Text;
-using Microsoft.VisualBasic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -14,6 +11,8 @@ public class GameManager : MonoBehaviour
     // ui panel controllers
     public InputPanelController inputPanel;
     public CharacterStatsUIController statsUI;
+
+    // system function
 
 
     void Start()
@@ -43,7 +42,6 @@ public class GameManager : MonoBehaviour
     {
         // call the inputpanel ui to get user inputs
         var ui = inputPanel.ShowModule(createPCPrefab) as CreatePCUI;
-
         ui.Initialize((name, item) =>
         {
             CreateNewPC(name, item);
@@ -75,4 +73,13 @@ public class GameManager : MonoBehaviour
             string.Join(", ", character.items)
         );
     }
+
+    public void DeleteCharacter()
+    {
+        DeletePlayerCharacter.Delete();
+        character = null;
+        statsUI.UpdateStats("", 0, 0, "");
+        StartCharacterCreation();
+    }
+
 }
