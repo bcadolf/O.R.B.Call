@@ -21,6 +21,7 @@
           "energyCost": 0
         }
       ],
+      "passiveAbilities": [{""}],
       "activateCost": 6,
       "price": 46
     },
@@ -45,6 +46,7 @@
           "energyCost": 0
         }
       ],
+      "passiveAbilities": [{""}],
       "activateCost": 3,
       "price": 34
     },
@@ -69,6 +71,7 @@
           "energyCost": 2
         }
       ],
+      "passiveAbilities": [{""}],
       "activateCost": 4,
       "price": 63
     }
@@ -87,6 +90,7 @@
         "energyCost": 0
       }
     ],
+    "passiveAbilities": [{"An ability that is always active such as armor defense etc. "}]
     "activateCost": 0,
     "price": 0
   }
