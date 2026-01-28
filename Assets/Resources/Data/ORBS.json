@@ -1,0 +1,93 @@
+{
+  "ORBS": [
+    {
+      "tier": "Basic",
+      "type": "Hand",
+      "shape": "Sword",
+      "description": "",
+      "abilities": [
+        {
+          "move": "Attack with sword.",
+          "attack": 2,
+          "defense": 0,
+          "bonus": 0,
+          "energyCost": 0
+        },
+        {
+          "move": "Block with sword.",
+          "attack": 0,
+          "defense": 1,
+          "bonus": 0,
+          "energyCost": 0
+        }
+      ],
+      "activateCost": 6,
+      "price": 46
+    },
+    {
+      "tier": "Basic",
+      "type": "Hand",
+      "shape": "Dagger",
+      "description": "",
+      "abilities": [
+        {
+          "move": "Attack with the dagger",
+          "attack": 1,
+          "defense": 0,
+          "bonus": 0,
+          "energyCost": 0
+        },
+        {
+          "move": "Parry with the dagger.",
+          "attack": 0,
+          "defense": 1,
+          "bonus": 0,
+          "energyCost": 0
+        }
+      ],
+      "activateCost": 3,
+      "price": 34
+    },
+    {
+      "tier": "Basic",
+      "type": "Hand",
+      "shape": "Ring",
+      "description": "",
+      "abilities": [
+        {
+          "move": "Throw a firedart",
+          "attack": 3,
+          "defense": 0,
+          "bonus": 0,
+          "energyCost": 1
+        },
+        {
+          "move": "Summon a basic magic shield.",
+          "attack": 0,
+          "defense": 2,
+          "bonus": 0,
+          "energyCost": 2
+        }
+      ],
+      "activateCost": 4,
+      "price": 63
+    }
+  ],
+  "model": {
+    "tier": "Basic, ",
+    "type": "Hand, Body, Core",
+    "shape": "item shape when called: hand is just the item, armor: chest, upper body, torso and limbs, then full with helm possbily based on tier?, core is never seem it is a semi perminate passive.",
+    "description": "what does it do this will be the readout for user",
+    "ability": [
+      {
+        "move": "this is where the moves that will show in the input action field will be",
+        "attack": 0,
+        "defense": 0,
+        "bonus": 0,
+        "energyCost": 0
+      }
+    ],
+    "activateCost": 0,
+    "price": 0
+  }
+}
