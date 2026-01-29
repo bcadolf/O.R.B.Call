@@ -21,7 +21,7 @@
           "energyCost": 0
         }
       ],
-      "passiveAbilities": [{""}],
+      "passiveAbilities": [{ "": 0 }],
       "activateCost": 6,
       "price": 46
     },
@@ -46,7 +46,7 @@
           "energyCost": 0
         }
       ],
-      "passiveAbilities": [{""}],
+      "passiveAbilities": [{ "": 0 }],
       "activateCost": 3,
       "price": 34
     },
@@ -71,13 +71,13 @@
           "energyCost": 2
         }
       ],
-      "passiveAbilities": [{""}],
+      "passiveAbilities": [{ "": 0 }],
       "activateCost": 4,
       "price": 63
     }
   ],
   "model": {
-    "tier": "Basic, ",
+    "tier": "Basic, Initiate, Adept, Lunar, Solar, Stellar",
     "type": "Hand, Body, Core",
     "shape": "item shape when called: hand is just the item, armor: chest, upper body, torso and limbs, then full with helm possbily based on tier?, core is never seem it is a semi perminate passive.",
     "description": "what does it do this will be the readout for user",
@@ -90,7 +90,9 @@
         "energyCost": 0
       }
     ],
-    "passiveAbilities": [{"An ability that is always active such as armor defense etc. "}]
+    "passiveAbilities": [
+      { "An ability that is always active such as armor defense etc. ": 0 }
+    ],
     "activateCost": 0,
     "price": 0
   }
