@@ -194,6 +194,7 @@ GameObject:
   - component: {fileID: 245526638956373060}
   - component: {fileID: -5073071627825695882}
   - component: {fileID: 3063630553331453505}
+  - component: {fileID: 5390719376060302283}
   m_Layer: 0
   m_Name: BasicORB
   m_TagString: Untagged
@@ -276,3 +277,15 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6237610863680254439}
   m_CullTransparentMesh: 1
+--- !u!114 &5390719376060302283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6237610863680254439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a73b9468e01b14895975ab650d93da68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ORBDragUI
