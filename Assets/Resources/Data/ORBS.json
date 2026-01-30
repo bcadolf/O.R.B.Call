@@ -83,6 +83,24 @@
       "passiveAbilities": [{ "": 0 }],
       "activateCost": 4,
       "price": 63
+    },
+      {
+      "id": 3,
+      "tier": "Basic",
+      "type": "Core",
+      "shape": "Sphere",
+      "description": "",
+      "abilities": [
+        { "": ""}
+      ],
+      "passiveAbilities": [
+        {
+          "attack": 0,
+          "defense": 0,
+          "bonus": 10
+        }],
+      "activateCost": 4,
+      "price": 63
     }
   ],
   "model": {
