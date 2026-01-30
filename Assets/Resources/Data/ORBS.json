@@ -5,7 +5,7 @@
       "tier": "Basic",
       "type": "Hand",
       "shape": "Sword",
-      "description": "",
+      "description": "A stating ORB. When activated it takes the shape of a simoke unadorned short sword in the equipped hand.",
       "abilities": [
         {
           "move": "Attack with sword.",
@@ -37,7 +37,7 @@
       "tier": "Basic",
       "type": "Hand",
       "shape": "Dagger",
-      "description": "",
+      "description": "A starting ORB. Once activated it takes the shape of a simple unadorned dagger in the equipped hand.",
       "abilities": [
         {
           "move": "Attack with the dagger",
@@ -63,7 +63,7 @@
       "tier": "Basic",
       "type": "Hand",
       "shape": "Ring",
-      "description": "",
+      "description": "An uncommon starting ORB. Once activated it takes the shape of a ring on the equipped hand.",
       "abilities": [
         {
           "move": "Throw a firedart",
@@ -85,11 +85,11 @@
       "price": 63
     },
       {
-      "id": 3,
+      "id": 4,
       "tier": "Basic",
       "type": "Core",
       "shape": "Sphere",
-      "description": "",
+      "description": "A very rare basic ORB. Core types are the hardest to find and most mysterious. This core ORB enters the energy core expanding the storage limit. Does not need activated.",
       "abilities": [
         { "": ""}
       ],
@@ -97,7 +97,7 @@
         {
           "attack": 0,
           "defense": 0,
-          "bonus": 10
+          "bonus": 50
         }],
       "activateCost": 4,
       "price": 63
