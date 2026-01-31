@@ -82,4 +82,9 @@ public class GameManager : MonoBehaviour
         StartCharacterCreation();
     }
 
+    public void ClearInputPanel()
+    {
+        inputPanel.Clear();
+    }
+
 }

@@ -3,9 +3,10 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 
-public class ORBItemUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler
+public class ORBItemUI : MonoBehaviour, IPointerClickHandler // IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     private ORBSingle orbData;
+
 
     public void Initialize(ORBSingle data)
     {
@@ -14,7 +15,13 @@ public class ORBItemUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        Debug.Log("ORB CLICKED: " + orbData?.id);
         ORBPopupUI.Instance.Show(orbData);
+    }
+
+    public void ClosePopup()
+    {
+        ORBPopupUI.Instance.Hide();
     }
 
 
@@ -24,48 +31,49 @@ public class ORBItemUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     private Transform originalParent;
     private RectTransform rectTransform;
 
-    void Awake()
-    {
-        canvas = GetComponentInParent<Canvas>();
-        canvasGroup = gameObject.AddComponent<CanvasGroup>();
-        rectTransform = GetComponent<RectTransform>();
-    }
+    // void Awake()
+    // {
+    //     canvas = GetComponentInParent<Canvas>();
+    //     canvasGroup = gameObject.AddComponent<CanvasGroup>();
+    //     rectTransform = GetComponent<RectTransform>();
+    // }
 
-    public void OnBeginDrag(PointerEventData eventData)
-    {
-        originalParent = transform.parent;
+    // public void OnBeginDrag(PointerEventData eventData)
+    // {
+    //     originalParent = transform.parent;
 
-        canvasGroup.blocksRaycasts = false;
+    //     canvasGroup.blocksRaycasts = false;
 
-        transform.SetParent(canvas.transform);
-    }
+    //     transform.SetParent(canvas.transform);
+    // }
 
-    public void OnDrag(PointerEventData eventData)
-    {
+    // public void OnDrag(PointerEventData eventData)
+    // {
 
-        Vector2 localPoint; 
+    //     Vector2 localPoint; 
 
-        RectTransformUtility.ScreenPointToLocalPointInRectangle( 
-            canvas.transform as RectTransform, eventData.position, 
-            canvas.renderMode == RenderMode.ScreenSpaceOverlay ? null : canvas.worldCamera, 
-            out localPoint 
-        );
+    //     RectTransformUtility.ScreenPointToLocalPointInRectangle( 
+    //         canvas.transform as RectTransform, eventData.position, 
+    //         canvas.renderMode == RenderMode.ScreenSpaceOverlay ? null : canvas.worldCamera, 
+    //         out localPoint 
+    //     );
 
-        rectTransform.anchoredPosition = localPoint;
-    }
+    //     rectTransform.anchoredPosition = localPoint;
+    // }
 
-    public void OnEndDrag(PointerEventData eventData) { 
+    // public void OnEndDrag(PointerEventData eventData) { 
 
-        canvasGroup.blocksRaycasts = true;
+    //     canvasGroup.blocksRaycasts = true;
 
-        if (eventData.pointerEnter != null && eventData.pointerEnter.CompareTag("ItemDropZone")) 
-        { 
-            transform.SetParent(eventData.pointerEnter.transform, false); 
-        } 
-        else 
-        { 
-            transform.SetParent(originalParent, false);
-        }
-    }
+    //     if (eventData.pointerEnter != null && eventData.pointerEnter.CompareTag("ItemDropZone")) 
+    //     { 
+    //         transform.SetParent(eventData.pointerEnter.transform, false); 
+    //     } 
+    //     else 
+    //     { 
+    //         transform.SetParent(originalParent, false);
+    //     }
+    // }
 
 }
+
