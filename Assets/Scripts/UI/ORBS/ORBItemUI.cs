@@ -3,8 +3,22 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 
-public class ORBDragUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class ORBItemUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler
 {
+    private ORBSingle orbData;
+
+    public void Initialize(ORBSingle data)
+    {
+        orbData = data;
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        ORBPopupUI.Instance.Show(orbData);
+    }
+
+
+
     private Canvas canvas;
     private CanvasGroup canvasGroup;
     private Transform originalParent;
