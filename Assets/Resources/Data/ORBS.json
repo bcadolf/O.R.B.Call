@@ -84,23 +84,22 @@
       "activateCost": 4,
       "price": 63
     },
-      {
+    {
       "id": 4,
       "tier": "Basic",
       "type": "Core",
       "shape": "Sphere",
       "description": "A very rare basic ORB. Core types are the hardest to find and most mysterious. This core ORB enters the energy core expanding the storage limit. Does not need activated.",
-      "abilities": [
-        { "": ""}
-      ],
+      "abilities": [{ "": "" }],
       "passiveAbilities": [
         {
           "attack": 0,
           "defense": 0,
           "bonus": 50
-        }],
+        }
+      ],
       "activateCost": 4,
-      "price": 63
+      "price": 10000
     }
   ],
   "model": {

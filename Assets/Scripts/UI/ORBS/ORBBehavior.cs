@@ -25,6 +25,11 @@ public class ORBBehavior : MonoBehaviour
 
     public void ToggleCall()
     {
+        if (!isEquipped)
+        {
+            // need to equip first
+            return;
+        }
         isCalled = !isCalled;
 
         if (calledIndicator != null) 

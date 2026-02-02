@@ -22,6 +22,7 @@ public class ORBGridSpawn : MonoBehaviour
 
             // add data to orb prefab on scene
             ORBItemUI ui = orbInstance.GetComponent<ORBItemUI>();
+            
             ui.Initialize(orb);
         }
     }

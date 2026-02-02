@@ -6,23 +6,20 @@ using UnityEngine.UI;
 public class ORBItemUI : MonoBehaviour, IPointerClickHandler // IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     private ORBSingle orbData;
+    private ORBBehavior behavior;
 
 
     public void Initialize(ORBSingle data)
     {
         orbData = data;
+        behavior = GetComponent<ORBBehavior>();
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log("ORB CLICKED: " + orbData?.id);
-        ORBPopupUI.Instance.Show(orbData);
+        ORBPopupUI.Instance.Show(orbData, behavior);
     }
 
-    public void ClosePopup()
-    {
-        ORBPopupUI.Instance.Hide();
-    }
 
 
 

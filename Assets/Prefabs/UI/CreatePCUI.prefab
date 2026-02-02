@@ -436,6 +436,9 @@ MonoBehaviour:
     - m_Text: 'Opal Relic Blazar - Basic: Gauntlet'
       m_Image: {fileID: 0}
       m_Color: {r: 0.03773582, g: 0.03773582, b: 0.03773582, a: 1}
+    - m_Text: 'Opal Relic Blazar - Basic: Gauntlet'
+      m_Image: {fileID: 0}
+      m_Color: {r: 0.03773582, g: 0.03773582, b: 0.03773582, a: 1}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []

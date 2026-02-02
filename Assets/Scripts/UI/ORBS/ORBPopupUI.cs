@@ -16,6 +16,8 @@ public class ORBPopupUI : MonoBehaviour
     [SerializeField] private TMP_Text passiveAbilitesText;
     [SerializeField] private TMP_Text callCostText;
 
+    private ORBBehavior currentOrb;
+
     private void Awake()
     {
         Instance = this;
@@ -23,8 +25,9 @@ public class ORBPopupUI : MonoBehaviour
     }
 
 
-    public void Show(ORBSingle data)
+    public void Show(ORBSingle data, ORBBehavior orb)
     {
+        currentOrb = orb;
         
         abilitiesText.text = string.Join("\n\n", data.abilities.Select(ability => 
             $"{ability.move}\nAttack: {ability.attack}   Defense: {ability.defense}   Bonus: {ability.bonus}   Energy Cost: {ability.energyCost}"));
@@ -43,4 +46,15 @@ public class ORBPopupUI : MonoBehaviour
     {
         panel.SetActive(false);
     }
+
+    public void OnEquipToggle()
+    {
+        currentOrb?.ToggleEquip();
+    }
+
+    public void OnCallToggle()
+    {
+        currentOrb?.ToggleCall();
+    }
+
 }
