@@ -426,19 +426,7 @@ MonoBehaviour:
   m_Value: 0
   m_MultiSelect: 0
   m_Options:
-    m_Options:
-    - m_Text: 'Opal Relic Blazar - Basic: Sword'
-      m_Image: {fileID: 0}
-      m_Color: {r: 0, g: 0, b: 0, a: 1}
-    - m_Text: 'Opal Relic Blazar - Basic: Ring'
-      m_Image: {fileID: 0}
-      m_Color: {r: 0.028301895, g: 0.0271004, b: 0.0271004, a: 1}
-    - m_Text: 'Opal Relic Blazar - Basic: Gauntlet'
-      m_Image: {fileID: 0}
-      m_Color: {r: 0.03773582, g: 0.03773582, b: 0.03773582, a: 1}
-    - m_Text: 'Opal Relic Blazar - Basic: Gauntlet'
-      m_Image: {fileID: 0}
-      m_Color: {r: 0.03773582, g: 0.03773582, b: 0.03773582, a: 1}
+    m_Options: []
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1040,6 +1028,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1628127270292530937}
   - component: {fileID: 2242339306068578993}
+  - component: {fileID: 9216045035172111616}
   m_Layer: 0
   m_Name: CreatePCUI
   m_TagString: Untagged
@@ -1080,6 +1069,21 @@ MonoBehaviour:
   nameInput: {fileID: 914003293563820544}
   itemDropdown: {fileID: 2895420914330366496}
   confirmButton: {fileID: 5438380557213377697}
+  orbDropdownSource: {fileID: 9216045035172111616}
+--- !u!114 &9216045035172111616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5497592478950174141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9e95d1b0d36f4ec58190cd75bae8750, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StartingORBDropdown
+  dropdown: {fileID: 2895420914330366496}
+  startingOrbs: []
 --- !u!1 &6211476672519914897
 GameObject:
   m_ObjectHideFlags: 0
@@ -1548,7 +1552,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Opal Relic Blazar - Basic: Sword'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

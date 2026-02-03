@@ -7,6 +7,7 @@ public class CreatePCUI : MonoBehaviour
     public TMP_InputField nameInput;
     public TMP_Dropdown itemDropdown;
     public Button confirmButton;
+    public StartingORBDropdown orbDropdownSource;
 
     private System.Action<string, string> onComplete;
 
@@ -17,8 +18,9 @@ public class CreatePCUI : MonoBehaviour
         confirmButton.onClick.AddListener(() =>
         {
             string name = nameInput.text;
-            string item = itemDropdown.options[itemDropdown.value].text;
-            onComplete?.Invoke(name, item);
+            int index = itemDropdown.value;
+            int orbId = orbDropdownSource.startingOrbs[index].id;
+            onComplete?.Invoke(name, orbId.ToString());
         });
 
     }

@@ -17,6 +17,11 @@ public class CharacterStatsUIController : MonoBehaviour
         energyText.text = "Energy: " + energy;
         itemsText.text = "Items: " + items;
     }
+
+    public void UpdateInventory()
+    {
+        return;
+    }
 }
 
 

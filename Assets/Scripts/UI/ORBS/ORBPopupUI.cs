@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using System.Linq;
+using UnityEngine.UI;
 
 
 public class ORBPopupUI : MonoBehaviour
@@ -15,6 +16,8 @@ public class ORBPopupUI : MonoBehaviour
     [SerializeField] private TMP_Text abilitiesText;
     [SerializeField] private TMP_Text passiveAbilitesText;
     [SerializeField] private TMP_Text callCostText;
+    [SerializeField] private Toggle equipToggle;
+    [SerializeField] private Toggle callToggle;
 
     private ORBBehavior currentOrb;
 
@@ -44,7 +47,10 @@ public class ORBPopupUI : MonoBehaviour
 
     public void Hide()
     {
+        equipToggle.isOn = false;
+        callToggle.isOn = false;
         panel.SetActive(false);
+        currentOrb = null;
     }
 
     public void OnEquipToggle()
