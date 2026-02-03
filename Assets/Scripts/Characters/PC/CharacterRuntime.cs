@@ -8,7 +8,7 @@ public class CharacterRuntime
     public string characterName;
     public int health;
     public int energy;
-    public List<string> items;
+    public List<int> invOrbs;
 
 
     public CharacterRuntime(CharacterStatsSO model)
@@ -16,8 +16,13 @@ public class CharacterRuntime
         characterName = model.characterName;
         health = model.healthStart;
         energy = model.energyStart;
-        items = new List<string>(model.startingItems);
-        inventory = "working on it";
+        invOrbs = new List<int>();
+
+        foreach (var item in model.startingItems) {
+            if (int.TryParse(item, out int id)) {
+                invOrbs.Add(id);
+            }
+        };
     }
 
 }

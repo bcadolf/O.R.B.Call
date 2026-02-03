@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ORBItemUI : MonoBehaviour, IPointerClickHandler
 {
-    private ORBSingle orbData;
+    public ORBSingle orbData;
     private ORBBehavior behavior;
 
 

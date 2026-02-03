@@ -9,9 +9,9 @@ public class CreatePCUI : MonoBehaviour
     public Button confirmButton;
     public StartingORBDropdown orbDropdownSource;
 
-    private System.Action<string, string> onComplete;
+    private System.Action<string, int> onComplete;
 
-    public void Initialize(System.Action<string, string> callback)
+    public void Initialize(System.Action<string, int> callback)
     {
         onComplete = callback;
 
@@ -20,7 +20,7 @@ public class CreatePCUI : MonoBehaviour
             string name = nameInput.text;
             int index = itemDropdown.value;
             int orbId = orbDropdownSource.startingOrbs[index].id;
-            onComplete?.Invoke(name, orbId.ToString());
+            onComplete?.Invoke(name, orbId);
         });
 
     }

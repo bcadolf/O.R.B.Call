@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance { get; private set; }
+
     // Player character ui models and data
     public CharacterStatsSO characterModel;
     public CharacterRuntime character;
@@ -13,7 +15,11 @@ public class GameManager : MonoBehaviour
     public CharacterStatsUIController statsUI;
 
     // system function
+    public InventoryORBSpawn inventoryORBSpawn;
 
+    void Awake() {
+        Instance = this;
+    }
 
     void Start()
     {
@@ -42,20 +48,19 @@ public class GameManager : MonoBehaviour
     {
         // call the inputpanel ui to get user inputs
         var ui = inputPanel.ShowModule(createPCPrefab) as CreatePCUI;
-        ui.Initialize((name, item) =>
+        ui.Initialize((name, orbID) =>
         {
-            CreateNewPC(name, item);
+            CreateNewPC(name, orbID);
         });
     }
 
-    void CreateNewPC(string name, string item)
+    void CreateNewPC(string name, int orbId)
     {
         // use SO to build runtime
         character = new CharacterRuntime(characterModel);
 
         character.characterName = name;
-        character.items.Clear();
-        character.items.Add(item);
+        character.invOrbs.Add(orbId);
 
         SaveGame();
 
@@ -69,17 +74,21 @@ public class GameManager : MonoBehaviour
         statsUI.UpdateStats(
             character.characterName,
             character.health,
-            character.energy,
-            string.Join(", ", character.items)
+            character.energy
         );
+
+        inventoryORBSpawn.PopulateORBs(character);
+
     }
 
     public void DeleteCharacter()
     {
         DeletePlayerCharacter.Delete();
         character = null;
-        statsUI.UpdateStats("", 0, 0, "");
+        statsUI.UpdateStats("", 0, 0);
+        inventoryORBSpawn.ClearInventory();
         StartCharacterCreation();
+        
     }
 
     public void ClearInputPanel()

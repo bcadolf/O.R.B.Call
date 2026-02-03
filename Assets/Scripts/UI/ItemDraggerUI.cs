@@ -8,10 +8,13 @@ public class ItemDragger : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     private Transform originalParent;
     private RectTransform rectTransform;
     private Vector2 offset;
+    public CharacterRuntime characterRuntime;
+
 
 
     void Awake()
     {
+        characterRuntime = GameManager.Instance.character;
         canvas = GetComponentInParent<Canvas>();
         canvasGroup = gameObject.AddComponent<CanvasGroup>();
         rectTransform = GetComponent<RectTransform>();
@@ -55,7 +58,7 @@ public class ItemDragger : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
         GameObject target = eventData.pointerEnter;
 
-        if (target != null && target.CompareTag("ItemDropZone")) 
+        if (target != null && target.CompareTag("Inventory") || target.CompareTag("GeneralDrop")) 
             { 
             // find content child
             Transform contentTransform = target.transform.Find("Content");
@@ -63,18 +66,42 @@ public class ItemDragger : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             if (contentTransform != null) 
             {
                 // Drop it into the scrollable Content
-                transform.SetParent(contentTransform, false); 
+                transform.SetParent(contentTransform, false);
             }
             else 
             {
-                // Fallback: If no Content child exists, just parent to the target
+                //  no Content child exists, just parent to the target
                 transform.SetParent(target.transform, false); 
             }
+            UpdateOrbLocation(target);
             } 
             else 
             { 
                 // go back to box if wrong drop zone
                 transform.SetParent(originalParent, false);
+                UpdateOrbLocation(originalParent.gameObject);
+            } 
+    }
+
+    private void UpdateOrbLocation(GameObject dropTarget)
+    {
+        ORBItemUI orbUI = GetComponent<ORBItemUI>();
+        int orbId = orbUI.orbData.id;
+
+        if (dropTarget.CompareTag("Inventory"))
+        {
+            if (!characterRuntime.invOrbs.Contains(orbId))
+            {
+                characterRuntime.invOrbs.Add(orbId);
             }
+        }
+        else if (dropTarget.CompareTag("GeneralDrop"))
+        {
+            if (characterRuntime.invOrbs.Contains(orbId)) 
+            {
+                characterRuntime.invOrbs.Remove(orbId);
+            }
+        }
+        
     }
 }
