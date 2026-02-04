@@ -71,24 +71,31 @@ public class GameManager : MonoBehaviour
     {
         inputPanel.Clear();
 
-        statsUI.UpdateStats(
+        statsUI.StartingStats(
             character.characterName,
             character.health,
-            character.energy
+            character.energy,
+            character.healthMax,
+            character.energyMax
         );
 
         inventoryORBSpawn.PopulateORBs(character);
 
     }
 
+    public void UpdateStatsTest(){
+        character.health -= 3;
+        character.energy -= 1;
+        statsUI.UpdateStats(currentHealth: character.health, currentEnergy: character.energy);
+    }
+
     public void DeleteCharacter()
     {
         DeletePlayerCharacter.Delete();
         character = null;
-        statsUI.UpdateStats("", 0, 0);
+        statsUI.UpdateStats("",0,0,0,0);
         inventoryORBSpawn.ClearInventory();
         StartCharacterCreation();
-        
     }
 
     public void ClearInputPanel()

@@ -90,10 +90,7 @@ public class ItemDragger : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
         if (dropTarget.CompareTag("Inventory"))
         {
-            if (!characterRuntime.invOrbs.Contains(orbId))
-            {
-                characterRuntime.invOrbs.Add(orbId);
-            }
+            characterRuntime.invOrbs.Add(orbId);
         }
         else if (dropTarget.CompareTag("GeneralDrop"))
         {

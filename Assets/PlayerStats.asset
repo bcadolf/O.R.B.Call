@@ -15,6 +15,8 @@ MonoBehaviour:
   characterName: 
   healthStart: 10
   energyStart: 10
+  healthMaxStart: 10
+  energyMaxStart: 10
   startingItems:
   - 'Opal Relic Blazar - Basic '
   - '29 Credits '
