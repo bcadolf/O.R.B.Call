@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Beast Stats SO
   m_EditorClassIdentifier: Assembly-CSharp::BeastStatsSO
   id: 0
-  beastName: 
-  tier: 
-  image: {fileID: 0}
+  beastName: Horned Rabbit
+  tier: Basic
+  image: {fileID: 21300000, guid: f3e0cfe526c2f42379ff251351081e9b, type: 3}
   prefab: {fileID: 0}
   abilities: []
   lootDrops: []
