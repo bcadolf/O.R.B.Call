@@ -37,6 +37,44 @@
           "dropPercent": 0.01
         }
       ]
+    },
+    {
+      "id": 1,
+      "image": "basicHornedRabbit",
+      "tier": "Basic",
+      "name": "Horned Rabbit",
+      "health": 12,
+      "energy": 3,
+      "abilities": [
+        {
+          "move": "Attacks with horn.",
+          "attack": 1,
+          "defense": 0,
+          "bonus": 0,
+          "energyCost": 0
+        },
+        {
+          "move": "Shoots out energy horn.",
+          "attack": 6,
+          "defense": 0,
+          "bonus": 0,
+          "energyCost": 3
+        }
+      ],
+      "lootDrops": [
+        {
+          "orbId": 2,
+          "dropPercent": 75
+        },
+        {
+          "orbId": 1,
+          "dropPercent": 24.99
+        },
+        {
+          "orbId": 4,
+          "dropPercent": 0.01
+        }
+      ]
     }
   ],
   "Model": [
