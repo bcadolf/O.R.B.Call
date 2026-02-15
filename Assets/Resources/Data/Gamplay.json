@@ -1,37 +1,76 @@
 {
   "intro": "Loretha is a small world, or so you are told. Technoloy was on the rise until 3914EF. Early the first of morning of the new year there was a flash of bright light. Plants, animals, buildings, people anything exposed outside were lightly scorched. Then as the inital panic settled the entire world began to shake. People around the world thought it was an earthquake but as it continued for hours media round the world shared it was occuring everywhere at once. Scientists realise this was somethign new something they later termed the WorldQuake. The panic resumed, stores raided, riots began, religions preaching that the end of times was here. As the first night fell the shaking stopped. The very next day everything exposed to the light began to change mutating into something else. The living things such as people and beast become mindless, attacking everything in site their bodies changing. As the weeks passed order was restored the people, imprisoned or executed, the beasts and plants killed or driven out of the cities. The worst was yet to come. Months pass and the Orbeasts as they came to be called attack again, modern weapons no longer work against them. That when the goverment stepped forward wielding strange weapons and magic driving back the Orbeasts. Those were the first O.R.B. Callers. Decades have passed and the world has adjusted, knowledge became public and everyone is recruited to fight. What was discovered is inside each living thing is a small sphere. When harvested it can be used to awaken energy. This energy is used to call the energy out from ORBs allowing their form to change and abilities to manifest in the person calling it. --------- You open your eyes, today is the day of awakening. The day you become a caller. You will select your starting ORB and be sent out to fight your first orbeast.",
-  "locations": {
-    "town": {
+  "locations": [
+    {
+      "id": "town",
       "intro": "Welcome back to town. The gates are under watch by guards, the shops are closed and people are rushing back and forth just trying to survive each day.",
-      "actions": {
-        "shop": "Shop currently closed",
-        "room": "Go to your home/room.",
-        "basicGrounds": "Adventure into the orbeast grounds."
-      }
+      "actions": [
+        {
+          "id": "shop",
+          "label": "Shop currently closed"
+        },
+        {
+          "id": "room",
+          "label": "Go to your home/room."
+        },
+        {
+          "id": "basicGrounds",
+          "label": "Adventure into the orbeast grounds."
+        }
+      ]
     },
-    "room": {
+    {
+      "id": "room",
       "intro": "You personal room is small, cramped and dusty. Not much to see.",
-      "actions": {
-        "absorb": "Absorb orbs to increase energy capacity.",
-        "town": "Leave your room."
-      }
+      "actions": [
+        {
+          "id": "absorb",
+          "label": "Absorb orbs to increase energy capacity."
+        },
+        {
+          "id": "town",
+          "label": "Leave your room."
+        }
+      ]
     },
-
-    "shop": "Closed for renovations",
-    "basicGrounds": {
+    {
+      "id": "shop",
+      "intro": "Closed for renovations",
+      "actions": []
+    },
+    {
+      "id": "basicGrounds",
       "intro": "Everywhere you look there is swaths of grass and mounds of dirt. It is well known that only the weakest of orbeasts live here. Good luck on your hunt.",
-      "actions": {
-        "hunt": "Begin hunting for a orbeast.",
-        "town": "Go back to town."
-      }
+      "actions": [
+        {
+          "id": "hunt",
+          "label": "Begin hunting for a orbeast."
+        },
+        {
+          "id": "town",
+          "label": "Go back to town."
+        }
+      ]
     }
-  },
-  "encounter": {
-    "intro": "You find a ",
-    "actions": {
-      "attack": "Choose to engage.",
-      "flee": "Run away!!",
-      "call": "You forgot to equip/call the ORB do so now then select this action."
+  ],
+  "encounters": [
+    {
+      "id": "defaultEncounter",
+      "intro": "You find a ",
+      "actions": [
+        {
+          "id": "attack",
+          "label": "Choose to engage."
+        },
+        {
+          "id": "flee",
+          "label": "Run away!!"
+        },
+        {
+          "id": "call",
+          "label": "You forgot to equip/call the ORB do so now then select this action."
+        }
+      ]
     }
-  }
+  ]
 }

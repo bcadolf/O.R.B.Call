@@ -83,12 +83,6 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void UpdateStatsTest(){
-        character.health -= 3;
-        character.energy -= 1;
-        statsUI.UpdateStats(currentHealth: character.health, currentEnergy: character.energy);
-    }
-
     public void DeleteCharacter()
     {
         DeletePlayerCharacter.Delete();
